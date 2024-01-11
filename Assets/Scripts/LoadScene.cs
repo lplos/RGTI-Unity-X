@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class LoadScene : MonoBehaviour
+{
+    public string scena;
+
+    public void ShowScene(){
+        SceneManager.LoadScene(scena);
+    }
+
+    public void QuitGame(){
+        Debug.Log("QUIT");
+        Application.Quit();
+    }
+}
