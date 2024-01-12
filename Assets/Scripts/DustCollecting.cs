@@ -5,13 +5,29 @@ using UnityEngine;
 
 public class DustCollecting : MonoBehaviour
 {
-    public int Dust = 0;
+    public DustSpawner dusty;
+    public int Dust;// = dusty.DustCount;
     public TextMeshProUGUI dustCounter;
+
+    void Start(){
+        //Debug.Log(dusty.DustCount);
+        dustCounter.text = "Dust to collect: " + dusty.DustCount;
+        // Ensure dusty is not null before accessing DustCount
+        if (dusty != null)
+        {
+            Dust = dusty.DustCount;
+            //Debug.Log(Dust);
+        }
+        else
+        {
+            Debug.LogError("DustSpawner reference is null in DustCollecting script.");
+        }
+    }
     private void OnTriggerEnter(Collider other){
         if (other.transform.tag == "Dust")
         {
-            Dust++;
-            dustCounter.text = "Dust collected: " + Dust.ToString();
+            Dust--;
+            dustCounter.text = "Dust to collect: " + Dust.ToString();
             Destroy(other.gameObject);
         }
 

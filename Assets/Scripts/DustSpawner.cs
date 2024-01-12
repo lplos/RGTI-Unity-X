@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DustSpawner : MonoBehaviour
 {
+    public int DustCount = 0;
     public GameObject dustPrefab;
-    public void Start(){
-        int DustCount = Random.Range(1, 10);
-        for(int i = 0; i <= DustCount; i++){
+    public void Awake(){
+        DustCount = Random.Range(1, 10);
+        for(int i = 0; i < DustCount; i++){
         int spawnPointX = Random.Range(-10, 10);
         int spawnPointY = 0;
         int spawnPointZ = Random.Range(-10, 10);
