@@ -11,7 +11,7 @@ public class DustCollecting : MonoBehaviour
         if (other.transform.tag == "Dust")
         {
             Dust++;
-            dustCounter.text = "Remaining dust: " + Dust.ToString();
+            dustCounter.text = "Dust collected: " + Dust.ToString();
             Destroy(other.gameObject);
         }
 
