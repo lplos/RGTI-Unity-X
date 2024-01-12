@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DustCollecting : MonoBehaviour
 {
-    private int Dust = 0;
+    int Dust = 0;
     public TextMeshProUGUI dustCounter;
     private void OnTriggerEnter(Collider other){
         if (other.transform.tag == "Dust")
