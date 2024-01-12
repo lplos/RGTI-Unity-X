@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Roomba.sln"
+    "dotnet.defaultSolution": "RGTI-Unity-X.sln"
 }
