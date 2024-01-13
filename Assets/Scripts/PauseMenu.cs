@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
-    void Pause(){
+    public void Pause(){
         pauseMenuUI.SetActive(true);
         DustNBattery.SetActive(false);
         Time.timeScale = 0f;
