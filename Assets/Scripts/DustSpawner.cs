@@ -7,7 +7,7 @@ public class DustSpawner : MonoBehaviour
     public int DustCount = 0;
     public GameObject dustPrefab;
     public void Awake(){
-        DustCount = Random.Range(1, 10);
+        DustCount = Random.Range(3, 20);
         for(int i = 0; i < DustCount; i++){
         int spawnPointX = Random.Range(-10, 10);
         int spawnPointY = 0;
