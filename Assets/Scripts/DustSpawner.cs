@@ -9,9 +9,9 @@ public class DustSpawner : MonoBehaviour
     public void Awake(){
         DustCount = Random.Range(3, 20);
         for(int i = 0; i < DustCount; i++){
-        int spawnPointX = Random.Range(-10, 10);
+        int spawnPointX = Random.Range(-20, 20);
         int spawnPointY = 0;
-        int spawnPointZ = Random.Range(-10, 10);
+        int spawnPointZ = Random.Range(-20, 20);
 
         Vector3 spawnPosition = new Vector3(spawnPointX, spawnPointY, spawnPointZ);
 

@@ -9,6 +9,7 @@ public class Character : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         //transform.rotation = Mathf.Atan2(0, 0) * Mathf.Rad2Deg + 180;
+        FindObjectOfType<AudioManager>().Play("Roomba");
     }
 
     public float moveSpeed = 5f;

@@ -28,6 +28,7 @@ public class DustCollecting : MonoBehaviour
         if (other.transform.tag == "Dust")
         {
             Dust--;
+            FindObjectOfType<AudioManager>().Play("Suck");
             dustCounter.text = "Dust to collect: " + Dust.ToString();
             Destroy(other.gameObject);
         }

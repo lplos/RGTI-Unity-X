@@ -12,6 +12,8 @@ public class GameOverScreen : MonoBehaviour
         gameObject.SetActive(true);
         counter.SetActive(false);
         Time.timeScale = 0f;
+        FindObjectOfType<AudioManager>().StopPlaying("Roomba");
+        FindObjectOfType<AudioManager>().Play("Game Over");
     }
     public void RestartButton(){
         SceneManager.LoadScene("Game");
