@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Battery : MonoBehaviour
 {
     public Slider batterySlider;
+    public GameOverScreen GameOverScreen;
     public float progress = 1f;
     public float decreaseRate = 0.01f;
 
@@ -64,6 +65,9 @@ public class Battery : MonoBehaviour
         {
             // Set the offset based on the calculated maximum width to keep it visible within bounds
             fillRectTransform.offsetMax = new Vector2(1, fillRectTransform.offsetMax.y);
+        }
+        if(progress == 0){
+            GameOverScreen.Setup();
         }
     }
 }

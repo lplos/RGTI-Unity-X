@@ -6,6 +6,7 @@ using UnityEngine;
 public class DustCollecting : MonoBehaviour
 {
     public DustSpawner dusty;
+    public GameOverScreen GameOverScreen;
     public int Dust;// = dusty.DustCount;
     public TextMeshProUGUI dustCounter;
 
@@ -29,6 +30,9 @@ public class DustCollecting : MonoBehaviour
             Dust--;
             dustCounter.text = "Dust to collect: " + Dust.ToString();
             Destroy(other.gameObject);
+        }
+        if(Dust == 0){
+            GameOverScreen.Setup();
         }
 
     }
