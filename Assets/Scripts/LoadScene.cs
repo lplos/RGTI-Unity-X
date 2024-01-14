@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    public string scena;
+    public string sceneName;
 
-    public void ShowScene(){
-        SceneManager.LoadScene(scena);
+    public void ShowScene()
+    {
+        SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1f;
     }
 
-    public void QuitGame(){
+    public void QuitGame()
+    {
         Debug.Log("QUIT");
         Application.Quit();
     }

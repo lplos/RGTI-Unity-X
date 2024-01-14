@@ -14,11 +14,15 @@ public class GameOverScreen : MonoBehaviour
         Time.timeScale = 0f;
         FindObjectOfType<AudioManager>().StopPlaying("Roomba");
         FindObjectOfType<AudioManager>().Play("Game Over");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     public void RestartButton(){
         SceneManager.LoadScene("Game");
         counter.SetActive(true);
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     public void ExitButton(){
         SceneManager.LoadScene("Title Screen");
